@@ -3,6 +3,8 @@ JGD-Black is a theme collection for GTK applications and Openbox. This collectio
 
 With this theme package, you get GTK 2, GTK 3.20 and Openbox themes.
 
+* [Theme homepage at Jason G. Designs](http://www.jasong-designs.com/2017/02/04/jgd-black-gtk3/)
+
 ## How to Install
 
 1. Download the latest file from the [downloads](https://github.com/jgpws/jgd-black/tree/master/downloads) directory
