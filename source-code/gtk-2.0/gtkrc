@@ -1,0 +1,168 @@
+style "default"
+{
+	# use theme engine
+	engine "clearlooks" 
+	{
+		style = GLOSSY
+		radius = 3.0
+	}
+	
+	# modify the x/y thickness, used for spacing all over the place
+	xthickness = 6
+	ythickness = 3
+	
+	# Color scheme
+	# set the defaults for all widgets
+	# NORMAL = default unselected state
+	# INSENSITIVE = disabled state colors
+	# SELECTED = selected text colors
+	# PRELIGHT = hovered state colors
+	# ACTIVE = pressed button colors
+	
+	bg[NORMAL] = "#ededed"
+	fg[NORMAL] = "#333333"
+	text[NORMAL] = "#333333"
+	base[NORMAL] = "#ffffff"
+	
+	bg[INSENSITIVE] = "#ededed"
+	fg[INSENSITIVE] = "#666666"
+	text[INSENSITIVE] = "#666666"
+	base[INSENSITIVE] = "#ededed"
+	
+	bg[PRELIGHT] = mix (0.25, "#000000", "#ffffff")
+	fg[PRELIGHT] = "#000000"
+	text[PRELIGHT] = "#000000"
+	base[PRELIGHT] = "#808080"
+	
+	fg[SELECTED] = "#ffffff"
+	bg[SELECTED] = mix (0.75, "#000000", "#ffffff")
+	text[SELECTED] = "#ffffff"
+	base[SELECTED] = mix (0.75, "#000000", "#ffffff")
+	
+	fg[ACTIVE] = "#000000"
+	bg[ACTIVE] = mix (0.25, "#000000", "#ffffff")
+	
+	# Fonts
+	font_name = "DejaVu Sans Semi-Condensed"
+	
+	GtkButton::child-displacement-x = 1
+	GtkButton::child-displacement-y = 1
+	GtkButton::default-border = { 0, 0, 0, 0 }
+	GtkButton::image-spacing = 4
+	GtkMenuBar::internal-padding = 0
+	GtkMenu::horizontal-padding = 0
+	GtkMenu::vertical-padding = 0
+	GtkTreeView::even-row-color = "#ffffff"
+	GtkTreeView::odd-row-color = "#f2f2f2"
+	GtkWidget::link-color = "#000080"
+	GtkWidget::visited-link-color = "#400040"
+}
+
+style "default-button"
+{
+	xthickness = 3
+	ythickness = 3
+	
+	bg[SELECTED] = "#808080" # highlight color around selected buttons
+}
+
+style "default-notebook"
+{
+	bg[NORMAL] = "#ffffff"
+	fg[NORMAL] = "#404040"
+	#bg[ACTIVE] = "#808080"
+	bg[ACTIVE] = mix (0.5, "#000000", "#ffffff")
+	fg[ACTIVE] = "#ffffff"
+}
+
+style "default-checkbutton"
+{
+	fg[ACTIVE] = "#333333"
+}
+
+style "default-menubar"
+{
+	bg[NORMAL] = "#000000"
+	fg[NORMAL] = "#dedede"
+	bg[SELECTED] = mix (0.75, "#000000", "#ffffff")
+	fg[PRELIGHT] = "#ffffff"
+	
+	engine "clearlooks" 
+	{
+		radius = 3.0
+	}
+}
+
+style "default-menu"
+{
+	bg[NORMAL] = "#ffffff"
+	fg[PRELIGHT] = "#ffffff"
+	# The following fixes the issue of dark text prelight color in GtkComboBox
+	text[PRELIGHT] = "#ffffff"
+	
+	xthickness = 0
+	ythickness = 0
+	
+	engine "clearlooks"
+	{
+		radius = 0.0
+	}
+	
+}
+
+style "default-menuitem"
+{
+	xthickness = 2
+	ythickness = 3
+	bg[SELECTED] = mix (0.5, "#000000", "#ffffff")
+}
+
+style "default-treeview"
+{
+	bg[PRELIGHT] = mix (0.25, "#000000", "#ffffff")
+	fg[PRELIGHT] = "#333333"
+	base[PRELIGHT] = mix (0.25, "#000000", "#ffffff")
+	base[SELECTED] = mix (0.5, "#000000", "#ffffff")
+}
+
+style "default-progressbar"
+{
+	fg[PRELIGHT] = "#ffffff"
+	xthickness = 1
+	ythickness = 1
+	
+	engine "clearlooks"
+	{
+		hint = "progressbar"
+	}
+}
+
+style "default-entry"
+{
+	xthickness = 3
+	ythickness = 3
+}
+
+style "default-font"
+{
+	font_name = "DejaVu Sans Semi-Condensed"
+}
+
+class "GtkWidget" style "default"
+class "GtkEntry" style "default-entry"
+
+widget_class "*.GtkButton*" style "default-button"
+widget_class "*.GtkNotebook*" style "default-notebook"
+widget_class "*.GtkCheckButton.*" style "default-checkbutton"
+widget_class "*.GtkRadioButton.*" style "default-checkbutton"
+widget_class "*.GtkTreeView*" style "default-font"
+widget_class "*.GtkTreeView*" style "default-treeview"
+widget_class "*.GtkMenu*" style "default-menu"
+
+# The following notation must be used in order for all of the menu items to be the same height
+widget_class "*<GtkMenuItem>*" style "default-menuitem"
+
+widget_class "*.GtkMenuBar*" style "default-font"
+widget_class "*.GtkMenuBar*" style "default-menubar"
+widget_class "*.GtkProgressBar*" style "default-progressbar"
+#widget_class "*.GtkLinkButton*" style "default-linkbutton"
