@@ -23,7 +23,7 @@ To install JGD-Black globally:
 4. Enter sudo password
 5. `ls` to check that the theme folder is present
 
-Once installed, use a theme switching application such as LXAppearance or Gnome Tweak Tool to change the theme to JGD-Black
+Once installed, you can use a theme switching application such as **LXAppearance** or **Gnome Tweak Tool** to change the theme to JGD-Black
 
 ## How to install the Clearlooks theme engine
 
