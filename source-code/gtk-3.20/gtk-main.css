@@ -1,0 +1,18 @@
+/* JGD-Black- GTK+3.20 version */
+/* GTK Main file */
+
+@define-color theme_bg_color #ededed;
+@define-color theme_base_color #ffffff;
+@define-color theme_fg_color #333333;
+@define-color theme_dark_color #000000;
+@define-color theme_medium_color #808080;
+@define-color theme_light_color #ededed;
+@define-color theme_border_color #808080;
+@define-color theme_light_border_color #dedede;
+@define-color theme_dark_border_color #606060;
+@define-color theme_selected_bg_color #333333;
+@define-color theme_selected_fg_color #fafafa;
+@define-color theme_disabled_color #666666;
+@define-color theme_disabled_bg_color #ededed;
+@define-color theme_link_color #000080;
+@define-color theme_red #de0000;
