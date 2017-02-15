@@ -10,8 +10,8 @@ With this theme package, you get GTK 2, GTK 3.20 and Openbox themes.
 1. Download the latest file from the [downloads](https://github.com/jgpws/jgd-black/tree/master/downloads) directory
 2. Open a Terminal application
 3. Navigate to your Downloads folder in the terminal (usually titled Downloads). Type `cd Downloads`
-4. Type `ls` and look for `JGD-Black-month-day-year.tar.gz`, where month, day and year represent when the file was last updated
-5. Untar the file by typing `tar -zxvf JGD-Black-01-01-17.tar.gz`, substituting the current version's date numbers
+4. Type `ls` and look for `jgd-black-month-day-year.tar.gz`, where month, day and year represent when the file was last updated
+5. Untar the file by typing `tar -zxvf jgd-black-01-01-17.tar.gz`, substituting the current version's date numbers
 6. type `cd` again to get to your home folder; type `ls -a` and see if there is a **.themes** directory
 7. If one does not exist, create one: `mkdir .themes`
 8. `cd Downloads`
