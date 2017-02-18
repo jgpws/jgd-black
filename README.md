@@ -25,6 +25,12 @@ To install JGD-Black globally:
 4. Enter sudo password
 5. `ls` to check that the theme folder is present
 
+To install on Arch Linux:
+
+JGD-Black is available in the Arch User Repository. The easiest way to install it is with a pacman frontend which accesses the AUR, such as [Yaourt](https://archlinux.fr/yaourt-en).
+
+`yaourt -S jgd-black`
+
 Once installed, you can use a theme switching application such as **LXAppearance** or **Gnome Tweak Tool** to change the theme to JGD-Black
 
 ## How to install the Clearlooks theme engine
