@@ -17,7 +17,7 @@ With this theme package, you get GTK 2, GTK 3.20 and Openbox themes.
 8. `cd Downloads`
 9. `cp JGD-Black ../.themes`
 
-To install JGD-Black globally:
+### To install JGD-Black globally:
 
 1. Follow steps 1-5 above
 2. `cd /usr/share/themes`
@@ -25,7 +25,7 @@ To install JGD-Black globally:
 4. Enter sudo password
 5. `ls` to check that the theme folder is present
 
-To install on Arch Linux:
+### To install on Arch Linux:
 
 JGD-Black is available in the Arch User Repository. The easiest way to install it is with a pacman frontend which accesses the AUR, such as [Yaourt](https://archlinux.fr/yaourt-en).
 
@@ -33,15 +33,15 @@ JGD-Black is available in the Arch User Repository. The easiest way to install i
 
 Once installed, you can use a theme switching application such as **LXAppearance** or **Gnome Tweak Tool** to change the theme to JGD-Black
 
-## How to install the Clearlooks theme engine
+## How to install the Clearlooks theme engine:
 
 JGD-Black GTK2 requires the Clearlooks theme engine. To install from the command line:
 
-### Ubuntu and derivates
+### Ubuntu and derivatives:
 
 `apt-get install gtk-engines`
 
-### Arch Linux and derivatives
+### Arch Linux and derivatives:
 
 `sudo pacman -S gtk-engines`
 
