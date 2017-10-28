@@ -304,7 +304,7 @@ headerbar button.titlebutton.close:hover:backdrop,
 
 headerbar button.titlebutton.maximize,
 .titlebar button.titlebutton.maximize {
-	background-image: -gtk-scaled(url("assets/maximized-button.png"));
+	background-image: -gtk-scaled(url("assets/maximize-button.png"));
 }
 
 headerbar button.titlebutton.maximize:hover,
@@ -313,6 +313,24 @@ headerbar button.titlebutton.maximize:backdrop,
 headerbar button.titlebutton.maximize:hover:backdrop,
 .titlebar button.titlebutton.maximize:backdrop,
 .titlebar button.titlebutton.maximize:hover:backdrop {
+	background-image: -gtk-scaled(url("assets/maximize-button-selected.png"));
+}
+
+window.csd.maximized headerbar button.titlebutton.maximize,
+window.solid-csd.maximized headerbar button.titlebutton.maximize,
+window.csd.maximized .titlebar button.titlebutton.maximize,
+window.solid-csd.maximized .titlebar button.titlebutton.maximize {
+	background-image: -gtk-scaled(url("assets/maximized-button.png"));
+}
+
+window.csd.maximized headerbar button.titlebutton.maximize:hover,
+window.solid-csd.maximized headerbar button.titlebutton.maximize:hover,
+window.csd.maximized .titlebar button.titlebutton.maximize:hover,
+window.solid-csd.maximized .titlebar button.titlebutton.maximize:hover,
+window.csd.maximized headerbar button.titlebutton.maximize:backdrop,
+window.solid-csd.maximized headerbar button.titlebutton.maximize:backdrop,
+window.csd.maximized .titlebar button.titlebutton.maximize:backdrop,
+window.solid-csd.maximized .titlebar button.titlebutton.maximize:backdrop {
 	background-image: -gtk-scaled(url("assets/maximized-button-selected.png"));
 }
 
