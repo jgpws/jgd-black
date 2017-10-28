@@ -39,8 +39,24 @@ window.popup,
 }
 
 window decoration {
-	/*border: 1px solid mix (@theme_base_color, @theme_dark_color, 0.25);*/
-	
+	background-color: @theme_dark_color;
+	padding: 3px;
+}
+
+headerbar:backdrop,
+window decoration:backdrop,
+dialog decoration:backdrop {
+	background-color: @theme_medium_color;
+	color: @theme_dark_color;
+}
+
+.popup decoration, /* Right-click menus */
+.csd.popup decoration, /* Right-click menus */
+combobox window decoration,
+menuitem window decoration,
+scrolledwindow window decoration,
+scrolledwindow window.csd decoration {
+	padding: 0px;
 }
 
 selection,
@@ -271,6 +287,10 @@ notebook header tab:checked:hover button {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
+popover button {
+	color: @theme_fg_color;
+}
+
 popover modelbutton {
 	padding: 3px 6px;
 }
@@ -285,6 +305,23 @@ headerbar {
 	border-top-right-radius: 3px;
 }
 
+headerbar button {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	min-width: 20px;
+}
+
+headerbar button.close,
+headerbar button.maximize,
+headerbar button.minimize {
+	margin: 0 -3px;
+}
+
+headerbar button label {
+	color: @theme_fg_color;
+	font-weight: normal;
+}
+
 headerbar stackswitcher button {
 	background-color: rgba(255, 255, 255, 0.5);
 	margin: 0 3px 0 3px;
@@ -294,12 +331,6 @@ headerbar stackswitcher button:checked,
 headerbar stackswitcher button:hover {
 	background-color: @theme_base_color;
 	color: @theme_fg_color;
-}
-
-headerbar button.close,
-headerbar button.maximize,
-headerbar button.minimize {
-	margin: 0 -3px;
 }
 
 toolbar button {
@@ -350,7 +381,7 @@ toolbar button:checked {
 }
 
 .path-bar button.image-button:hover image {
-	border-bottom: 2px solid @theme_light_color;
+	border-bottom: 2px solid @theme_light_border_color;
 }
 
 .path-bar button.toggle:checked label,
@@ -368,13 +399,17 @@ toolbar button:checked {
 .path-bar button.toggle:hover label,
 .path-bar button.toggle.image-button:hover label,
 .path-bar button.toggle.text-button:hover label {
-	border-bottom: 2px solid @theme_light_color;
+	border-bottom: 2px solid @theme_light_border_color;
 }
 /* */
 
 /* Path bar inside CSD window, noted by class .pathbar */
 headerbar .pathbar {
 	color: @theme_medium_color;
+}
+
+headerbar .pathbar:backdrop {
+	color: @theme_selected_fg_color;
 }
 
 headerbar .pathbar button {
@@ -390,10 +425,14 @@ headerbar .pathbar button.active label {
 	color: @theme_selected_fg_color;
 }
 
+actionbar button {
+	margin: 3px 0px;
+}
+
 treeview button {
 	border-top-style: none;
 	border-right-style: none;
-	border-bottom: 1px solid @theme_light_color;
+	border-bottom: 1px solid @theme_light_border_color;
 	border-left-style: none;
 	border-radius: 0px;
 	margin: 0px;
@@ -429,7 +468,8 @@ button.suggested-action label {
 }
 
 /* Toolbars/Menus */
-toolbar {
+toolbar,
+actionbar {
 	padding: 3px;
 }
 
@@ -444,18 +484,12 @@ headerbar {
 	padding: 6px;
 }
 
-headerbar:backdrop,
-window decoration:backdrop,
-dialog decoration:backdrop {
-	background-color: @theme_medium_color;
-	color: @theme_dark_color;
-}
-
 /* see gtk-widgets-assets.css for client side window decorations */
 
-headerbar label.title {
+headerbar label {
 	color: @theme_selected_fg_color;
-	font-family: "DejaVu Sans Condensed Bold", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
+	font-weight: bold;
 }
 
 headerbar separator {
@@ -474,13 +508,17 @@ menu {
 menu separator,
 .menu separator,
 menuitem separator {
-	border: 1px solid @theme_light_color;
+	border: 1px solid @theme_light_border_color;
 }
 
 menubar {
 	background-color: @theme_dark_color;
 	color: @theme_selected_fg_color;
 	border-style: none;
+}
+
+menubar:backdrop {
+	background-color: @theme_medium_color;
 }
 
 menuitem,
@@ -612,7 +650,7 @@ combobox arrow {
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 	color: @theme_fg_color;
 	min-height: 16px;
-	min-width: 24px;
+	min-width: 16px;
 }
 
 combobox menuitem {
@@ -672,7 +710,8 @@ notebook header.left {
 	padding-left: 6px;
 }
 
-notebook header.top tab {
+notebook header.top tab,
+notebook header.top tabs > arrow {
 	border-radius: 3px 3px 0px 0px;
 	border-top: 1px solid mix (@theme_base_color, @theme_dark_color, 0.25);
 	border-right: 1px solid mix (@theme_base_color, @theme_dark_color, 0.62);
@@ -682,7 +721,8 @@ notebook header.top tab {
 	padding: 4px 6px 3px 6px;
 }
 
-notebook header.right tab {
+notebook header.right tab,
+notebook header.right tabs > arrow {
 	border-radius: 0px 3px 3px 0px;
 	border-top: 1px solid mix (@theme_base_color, @theme_dark_color, 0.25);
 	border-right: 1px solid mix (@theme_base_color, @theme_dark_color, 0.62);
@@ -692,7 +732,8 @@ notebook header.right tab {
 	padding: 6px;
 }
 
-notebook header.bottom tab {
+notebook header.bottom tab,
+notebook header.bottom tabs > arrow {
 	border-radius: 0px 0px 3px 3px;
 	border-right: 1px solid mix (@theme_base_color, @theme_dark_color, 0.62);
 	border-bottom: 1px solid mix (@theme_base_color, @theme_dark_color, 0.62);
@@ -702,7 +743,8 @@ notebook header.bottom tab {
 	padding: 3px 6px 4px 6px;
 }
 
-notebook header.left tab {
+notebook header.left tab,
+notebook header.left tabs > arrow {
 	border-radius: 3px 0px 0px 3px;
 	border-top: 1px solid mix (@theme_base_color, @theme_dark_color, 0.25);
 	border-bottom: 1px solid mix (@theme_base_color, @theme_dark_color, 0.62);
@@ -765,6 +807,16 @@ notebook header.left tab:checked {
 	padding-left: 7px;
 }
 
+notebook > header > tabs > arrow {
+	background-color: @theme_medium_color;
+	margin-bottom: 3px;
+}
+
+notebook > header > tabs > arrow:disabled {
+	background-color: transparent;
+	border-color: mix (@theme_base_color, @theme_dark_color, 0.5);
+}
+
 notebook > header.top > tabs > arrow.up,
 notebook > header.bottom > tabs > arrow.up,
 notebook > header.top > tabs > arrow.down,
@@ -797,9 +849,10 @@ treeview header button label {
 
 treeview,
 view,
-.view, /* This is used for LibreOffice toolbar dropdowns in Combobox */
+.primary-toolbar .view, /* This is used for LibreOffice toolbar dropdowns in Combobox */
 view text {
 	background-color: @theme_base_color;
+	color: @theme_fg_color;
 }
 
 .view:selected {
@@ -1065,17 +1118,18 @@ popover separator.horizontal {
 }
 
 /* Sidebars */
-stacksidebar scrolledwindow {
-	background-color: @theme_base_color;
+stacksidebar list {
+	background-color: @theme_light_color;
 }
 
-stacksidebar scrolledwindow row {
+stacksidebar row {
 	background-color: @theme_medium_color;
 	color: @theme_selected_fg_color;
 	padding: 6px;
 }
 
-stacksidebar scrolledwindow row:selected {
+stacksidebar row:selected,
+stacksidebar row:active {
 	background-color: @theme_base_color;
 	color: @theme_fg_color;
 }
@@ -1164,6 +1218,15 @@ dialog.background {
 	border-bottom: 1px solid @theme_border_color;
 }
 
+dialog headerbar label {
+	font-family: "DejaVu Sans Condensed", sans-serif;
+	font-weight: bold;
+}
+
+dialog headerbar button label {
+	font-weight: normal;
+}
+
 dialog fontchooser,
 iconview {
 	background-color: @theme_base_color;
@@ -1173,29 +1236,28 @@ scrolledwindow {
 	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.10);
 }
 
-revealer {
+overlay revealer.top {
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 	padding-right: 6px;
 	padding-bottom: 6px;
 }
 
-revealer frame {
+overlay revealer frame {
 	background-color: @theme_medium_color;
 	border: 1px solid @theme_dark_border_color;
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 	color: @theme_selected_fg_color;
 }
 
-revealer frame border {
+overlay revealer frame border {
 	border-color: transparent;
 }
 
-revealer button {
+overlay revealer button {
 	color: @theme_fg_color;
 }
 
 separator,
-frame,
 frame border /* Firefox borders */ {
 	border: 1px solid @theme_light_border_color;
 }
