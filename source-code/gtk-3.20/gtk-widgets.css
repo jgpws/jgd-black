@@ -140,10 +140,6 @@ switch slider {
 }
 
 /* Buttons/Spin Buttons/Checkboxes/Radios */
-button {
-	/*margin: 1px;*/
-}
-
 buttonbox button {
 	margin: 3px;
 }
@@ -198,6 +194,10 @@ button.link {
 	border-style: none;
 	color: @theme_link_color;
 	text-decoration: underline;
+}
+
+button.circular {
+	border-radius: 50%;
 }
 
 combobox button {
@@ -626,10 +626,6 @@ entry image:disabled {
 	/*border-left: none;*/
 }
 
-/*.horizontal combobx entry.combo {
-	border-left: 1px solid @theme_border-color;
-}*/
-
 combobox .cell:hover {
 	color: @theme_fg_color;
 }
@@ -809,7 +805,6 @@ notebook header.left tab:checked {
 
 notebook > header > tabs > arrow {
 	background-color: @theme_medium_color;
-	margin-bottom: 3px;
 }
 
 notebook > header > tabs > arrow:disabled {
