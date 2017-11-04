@@ -1,18 +1,18 @@
-/* JGD-Black- GTK+3.20 version */
+/* JGD-CobaltBlue- GTK+3.20 version */
 /* GTK Main file */
 
-@define-color theme_bg_color #ededed;
+@define-color theme_bg_color #edeffb;
 @define-color theme_base_color #ffffff;
-@define-color theme_fg_color #333333;
-@define-color theme_dark_color #000000;
-@define-color theme_medium_color #808080;
-@define-color theme_light_color #ededed;
-@define-color theme_border_color #808080;
-@define-color theme_light_border_color #dedede;
-@define-color theme_dark_border_color #606060;
-@define-color theme_selected_bg_color #333333;
-@define-color theme_selected_fg_color #fafafa;
-@define-color theme_disabled_color #666666;
-@define-color theme_disabled_bg_color #ededed;
-@define-color theme_link_color #000080;
+@define-color theme_fg_color rgba(0, 0, 0, 0.75);
+@define-color theme_dark_color #0020c2;
+@define-color theme_medium_color #808fe0;
+@define-color theme_light_color #edeffb;
+@define-color theme_border_color #808fe0;
+@define-color theme_light_border_color #dee2f7;
+@define-color theme_dark_border_color #6175d9;
+@define-color theme_selected_bg_color #334cce;
+@define-color theme_selected_fg_color rgba(255, 255, 255, 0.9);
+@define-color theme_disabled_color rgba(0, 0, 0, 0.5);
+@define-color theme_disabled_bg_color #edeffb;
+@define-color theme_link_color mix (@theme_base_color, @theme_dark_color, 0.75);
 @define-color theme_red #de0000;
