@@ -141,7 +141,7 @@ combobox menuitem:hover,
 menubar menuitem:hover,
 placessidebar row:selected,
 .view:selected {
-	background-color: mix (@theme_base_color_dark, #ffffff, 0.75);
+	background-color: mix (@theme_base_color_dark, @white, 0.75);
 }
 
 /* Buttons/Spin Buttons/Checkboxes/Radios */
@@ -340,33 +340,27 @@ headerbar button.minimize {
 }
 
 headerbar button:hover {
-	background-color: mix (#ffffff, @theme_fg_color_dark, 0.25);
+	background-color: mix (@theme_base_color, @theme_fg_color_dark, 0.25);
 }
 
 headerbar button label,
-dialog headerbar button label,
-.dialog-action-area button label {
-	color: @theme_base_color_dark;
+dialog headerbar button label {
+	color: @theme_fg_color;
 	font-weight: normal;
 }
 
-.dialog-action-area button {
-	background-color: #ffffff;
-}
-
 headerbar stackswitcher button {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: @headerbar_stackswitcher_button_bg;
 	margin: 0 3px 0 3px;
 }
 
 headerbar stackswitcher button:checked,
 headerbar stackswitcher button:hover {
-	background-color: #ffffff;
-	color: @theme_fg_color_dark;
+	background-color: @theme_base_color;
 }
 
-dialog button {
-	background-color: #ffffff;
+headerbar dialog button {
+	background-color: @theme_base_color;
 }
 
 toolbar button {
@@ -536,14 +530,14 @@ headerbar {
 /* see gtk-widgets-assets.css for client side window decorations */
 
 headerbar label {
-	color: #ffffff;
+	color: @white;
 	font-family: "DejaVu Sans", sans-serif;
 	font-stretch: condensed;
 	font-weight: bold;
 }
 
 headerbar separator {
-	border-color: rgba(255, 255, 255, 0.5);
+	border-color: @headerbar_stackswitcher_button_bg;
 }
 
 headerbar separator.vertical {
@@ -772,10 +766,10 @@ notebook header.left {
 notebook header.top tab,
 notebook header.top tabs > arrow {
 	border-radius: 3px 3px 0px 0px;
-	border-top: 1px solid mix (#ffffff, @black, 0.75);
+	border-top: 1px solid mix (@theme_base_color, @black, 0.75);
 	border-right: 1px solid mix (@theme_base_color_dark, @black, 0.62);
 	border-bottom: transparent;
-	border-left: 1px solid mix (#ffffff, @black, 0.75);
+	border-left: 1px solid mix (@theme_base_color, @black, 0.75);
 	margin-top: 3px;
 	margin-left: -1px;
 	padding: 4px 6px 3px 6px;
@@ -784,7 +778,7 @@ notebook header.top tabs > arrow {
 notebook header.right tab,
 notebook header.right tabs > arrow {
 	border-radius: 0px 3px 3px 0px;
-	border-top: 1px solid mix (#ffffff, @black, 0.75);
+	border-top: 1px solid mix (@theme_base_color, @black, 0.75);
 	border-right: 1px solid mix (@theme_base_color_dark, @black, 0.62);
 	border-bottom: 1px solid mix (@theme_base_color_dark, @black, 0.62);
 	border-left: transparent;
@@ -799,7 +793,7 @@ notebook header.bottom tabs > arrow {
 	border-top: transparent;
 	border-right: 1px solid mix (@theme_base_color_dark, @black, 0.62);
 	border-bottom: 1px solid mix (@theme_base_color_dark, @black, 0.62);
-	border-left: 1px solid mix (#ffffff, @black, 0.75);
+	border-left: 1px solid mix (@theme_base_color, @black, 0.75);
 	margin-bottom: 3px;
 	margin-left: -1px;
 	padding: 3px 6px 4px 6px;
@@ -811,7 +805,7 @@ notebook header.left tabs > arrow {
 	border-top: 1px solid mix (@theme_base_color_dark, @black, 0.25);
 	border-right: transparent;
 	border-bottom: 1px solid mix (@theme_base_color_dark, @black, 0.62);
-	border-left: 1px solid mix (#ffffff, @black, 0.75);
+	border-left: 1px solid mix (@theme_base_color, @black, 0.75);
 	margin-left: 3px;
 	margin-top: -1px;
 	padding: 6px 6px 6px 6px;
@@ -968,7 +962,7 @@ placessidebar {
 }
 
 placessidebar row:hover {
-	background-color: mix (@theme_base_color_dark, #ffffff, 0.50);
+	background-color: mix (@theme_base_color_dark, @white, 0.50);
 }
 
 placessidebar row:selected:hover {
@@ -1049,7 +1043,7 @@ scrollbar.vertical trough slider {
 }
 
 progressbar progress {
-	background-color: mix (#ffffff, @black, 0.75);
+	background-color: mix (@theme_base_color, @black, 0.75);
 }
 
 progressbar trough,
@@ -1266,7 +1260,7 @@ calendar:selected {
 /* Miscellaneous */
 dialog {
 	background-color: @theme_bg_color_dark;
-	color: #ffffff;
+	color: @theme_base_color;
 }
 
 dialog.background {
@@ -1276,7 +1270,8 @@ dialog.background {
 }
 
 dialog headerbar label {
-	font-family: "DejaVu Sans Condensed", sans-serif;
+	font-family: "DejaVu Sans", sans-serif;
+	font-stretch: condensed;
 	font-weight: bold;
 }
 
