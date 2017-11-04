@@ -1,18 +1,146 @@
-/* JGD-CobaltBlue- GTK+3.20 version */
+/* JGD-Black- GTK+3.20 version */
 /* GTK Main file */
 
-@define-color theme_bg_color #edeffb;
-@define-color theme_base_color #ffffff;
-@define-color theme_fg_color rgba(0, 0, 0, 0.75);
-@define-color theme_dark_color #0020c2;
-@define-color theme_medium_color #808fe0;
-@define-color theme_light_color #edeffb;
-@define-color theme_border_color #808fe0;
-@define-color theme_light_border_color #dee2f7;
-@define-color theme_dark_border_color #6175d9;
-@define-color theme_selected_bg_color #334cce;
-@define-color theme_selected_fg_color rgba(255, 255, 255, 0.9);
-@define-color theme_disabled_color rgba(0, 0, 0, 0.5);
-@define-color theme_disabled_bg_color #edeffb;
-@define-color theme_link_color mix (@theme_base_color, @theme_dark_color, 0.75);
-@define-color theme_red #de0000;
+
+/* Global colors */
+
+@define-color black #000000;
+@define-color white #ffffff;
+@define-color light_gray #ededed;
+@define-color medium_gray #808080;
+@define-color dark_gray #666666;
+@define-color darker_gray #333333;
+@define-color blue #000080;
+@define-color light_blue #0066ff;
+@define-color red #de0000;
+/* */
+
+/* Light */
+@define-color theme_bg_color @light_gray;
+@define-color theme_base_color @white;
+@define-color theme_fg_color @darker_gray;
+
+/* Dark */
+@define-color theme_bg_color_dark #212121;
+@define-color theme_base_color_dark @darker_gray;
+@define-color theme_fg_color_dark rgba(255, 255, 255, 0.80);
+
+
+/* Selection colors */
+
+/* Light */
+@define-color theme_selected_bg_color @darker_gray;
+@define-color theme_selected_fg_color #fafafa;
+
+/* Dark */
+@define-color theme_selected_bg_color_dark @light_gray;
+@define-color theme_selected_fg_color_dark #050505;
+
+
+/* Disabled colors */
+
+/* Light */
+@define-color theme_disabled_color @dark_gray;
+@define-color theme_disabled_bg_color @light_gray;
+
+/* Dark */
+@define-color theme_disabled_color_dark #404040;
+@define-color theme_disabled_bg_color_dark #212121;
+
+
+/* Window colors */
+
+@define-color theme_window_bg_color @black;
+@define-color theme_window_backdrop_bg_color @medium_gray;
+@define-color headerbar_bg_color @black;
+
+
+/* Button colors */
+
+/* Light */
+@define-color theme_button_bg_color mix (@theme_base_color, @theme_bg_color, 0.25);
+@define-color theme_button_bg_hover_color mix (@theme_base_color, @theme_fg_color, 0.25);
+@define-color theme_button_bg_active_color @theme_base_color;
+@define-color notebook_tab_button_bg rgba(255, 255, 255, 0.12);
+@define-color notebook_tab_button_bg_hover rgba(255, 255, 255, 0.25);
+@define-color notebook_tab_button_bg_checked rgba(255, 255, 255, 0.25);
+@define-color notebook_tab_button_bg_checked_hover rgba(255, 255, 255, 0.5);
+@define-color headerbar_button_bg_hover @theme_base_color;
+@define-color headerbar_stackswitcher_button_bg rgba(255, 255, 255, 0.5);
+
+/* Dark */
+@define-color theme_button_fg_color_dark @white;
+
+
+/* Label colors */
+
+@define-color pathbar_label_fg_color @medium_gray;
+@define-color theme_button_suggested_fg_color @white;
+
+
+/*Border colors */
+
+/* Light */
+@define-color theme_border_color @medium_gray;
+@define-color theme_border_color_highlight #dedede;
+@define-color theme_border_color_shade #606060;
+@define-color theme_focus_border_color @black;
+@define-color notebook_tab_button_border rgba(0, 0, 0, 0.25);
+@define-color notebook_tab_button_border_hover rgba(0, 0, 0, 0.5);
+@define-color notebook_tab_button_border_disabled mix (@theme_base_color, @black, 0.5);
+@define-color popover_separator_color rgba(0, 0, 0, 0.25);
+@define-color rubberband_border_color rgba(0, 0, 0, 0.25);
+
+/* Dark */
+@define-color theme_border_color_dark rgba(128, 128, 128, 0.75);
+@define-color theme_border_color_highlight_dark rgba(0, 0, 0, 0.15);
+@define-color theme_border_color_shade_dark #a0a0a0;
+
+
+/* Menu colors */
+
+@define-color menubar_bg_color #000000;
+@define-color menubar_backdrop_bg_color #808080;
+@define-color menu_border_color mix (@theme_base_color, @black, 0.25);
+@define-color menubar_bg_color_hover mix (@theme_base_color, @black, 0.75);
+@define-color menuitem_bg_color_hover mix (@theme_base_color, @black, 0.5);
+
+
+/* Notebook colors */
+
+@define-color tab_bg_color mix (@theme_base_color, @black, 0.5); 
+@define-color tab_fg_color @white;
+@define-color notebook_header_bg_color mix (@theme_base_color, @theme_fg_color, 0.25);
+@define-color tab_highlight mix (@theme_base_color, @black, 0.25);
+@define-color tab_shadow mix (@theme_base_color, @black, 0.62);
+
+
+/* View colors */
+
+@define-color view_bg_color_selected mix (@theme_base_color, @black, 0.5);
+@define-color view_bg_color_hover mix (@theme_base_color, @black, 0.25);
+
+
+/* Scrollbars/Scales etc. */
+
+@define-color trough_bg_color mix (@theme_base_color, @theme_fg_color, 0.25);
+@define-color progress_bg_color mix (@theme_base_color, @black, 0.75);
+@define-color levelbar_empty_bg_color @light_gray;
+@define-color levelbar_filled_bg_color @medium_gray;
+
+
+/* Miscellaneous colors */
+
+/* Light */
+@define-color popover_bg_color @medium_gray;
+@define-color stacksidebar_row_bg_color @medium_gray;
+@define-color switch_bg_color mix (@theme_base_color, @theme_fg_color, 0.25);
+@define-color switch_bg_color_checked @medium_gray;
+@define-color calendar_bg_color_selected @medium_gray;
+@define-color rubberband_bg_color rgba(128, 128, 128, 0.5);
+@define-color theme_link_color @blue;
+@define-color error_color #de0000;
+@define-color suggested_color @light_blue;
+
+/* Dark */
+@define-color theme_link_color_dark @light_blue;
