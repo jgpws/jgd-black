@@ -46,6 +46,11 @@ dialog decoration:backdrop {
 	color: @black;
 }
 
+dialog.csd decoration,
+window.csd decoration {
+	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .popup decoration, /* Right-click menus */
 .csd.popup decoration, /* Right-click menus */
 combobox window decoration,
@@ -122,7 +127,6 @@ menubar > menuitem:active,
 menuitem:hover,
 placessidebar row:selected,
 placessidebar row:hover,
-progressbar.horizontal progress,
 scale.horizontal slider,
 scrollbar.horizontal trough slider,
 switch slider,
@@ -613,8 +617,13 @@ menuitem {
 	border: 1px solid transparent;
 }
 
+.popup decoration, /* Right-click menus */
+.csd.popup decoration, /* Right-click menus */
+combobox window decoration,
 menuitem window decoration,
-combobox window decoration {
+scrolledwindow window decoration,
+scrolledwindow window.csd decoration,
+treeview window decoration {
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -1056,12 +1065,45 @@ progressbar.horizontal progress {
 	min-height: 16px;
 }
 
+progressbar.horizontal progress {
+	background-image: linear-gradient(to bottom,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(0, 0, 0, 0) 49%,
+		rgba(0, 0, 0, 0.15) 50%,
+		rgba(0, 0, 0, 0) 100%),
+							repeating-linear-gradient(135deg,
+		rgba(255, 255, 255, .15) 12px,
+		transparent 12px,
+		transparent 24px,
+		rgba(255, 255, 255, .10) 24px,
+		rgba(255, 255, 255, .10) 36px,
+		transparent 36px,
+		transparent 36px
+	);
+}
+
 progressbar.vertical progress,
 progressbar.vertical trough {
 	min-width: 16px;
 }
 
-progressbar.vertical progress,
+progressbar.vertical progress {
+	background-image: linear-gradient(to right,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(0, 0, 0, 0) 49%,
+		rgba(0, 0, 0, 0.10) 50%,
+		rgba(0, 0, 0, 0) 100%),
+							repeating-linear-gradient(45deg,
+		rgba(255, 255, 255, .15) 12px,
+		transparent 12px,
+		transparent 24px,
+		rgba(255, 255, 255, .10) 24px,
+		rgba(255, 255, 255, .10) 36px,
+		transparent 36px,
+		transparent 36px
+	);
+}
+
 progressbar.vertical trough slider,
 scrollbar.vertical trough slider {
 	background-image: linear-gradient(to right,
