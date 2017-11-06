@@ -1072,11 +1072,11 @@ progressbar.horizontal progress {
 		rgba(0, 0, 0, 0.15) 50%,
 		rgba(0, 0, 0, 0) 100%),
 							repeating-linear-gradient(135deg,
-		rgba(255, 255, 255, .15) 12px,
+		rgba(0, 0, 0, .15) 12px,
 		transparent 12px,
 		transparent 24px,
-		rgba(255, 255, 255, .10) 24px,
-		rgba(255, 255, 255, .10) 36px,
+		rgba(0, 0, 0, .10) 24px,
+		rgba(0, 0, 0, .10) 36px,
 		transparent 36px,
 		transparent 36px
 	);
@@ -1094,11 +1094,11 @@ progressbar.vertical progress {
 		rgba(0, 0, 0, 0.10) 50%,
 		rgba(0, 0, 0, 0) 100%),
 							repeating-linear-gradient(45deg,
-		rgba(255, 255, 255, .15) 12px,
+		rgba(0, 0, 0, .15) 12px,
 		transparent 12px,
 		transparent 24px,
-		rgba(255, 255, 255, .10) 24px,
-		rgba(255, 255, 255, .10) 36px,
+		rgba(0, 0, 0, .10) 24px,
+		rgba(0, 0, 0, .10) 36px,
 		transparent 36px,
 		transparent 36px
 	);
