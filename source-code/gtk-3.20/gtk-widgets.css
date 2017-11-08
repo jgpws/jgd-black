@@ -173,7 +173,8 @@ button image:disabled,
 button.image-button:disabled box,
 button label:disabled,
 combobox box:disabled,
-combobox box arrow:disabled {
+combobox box arrow:disabled,
+entry:disabled {
 	background-color: transparent;
 }
 
@@ -229,6 +230,10 @@ spinbutton {
 
 spinbutton button:active:focus {
 	background-color: @theme_button_bg_active_color;
+}
+
+spinbutton button:disabled {
+	-gtk-icon-effect: dim;
 }
 
 spinbutton.horizontal button {
@@ -1112,8 +1117,16 @@ scale slider {
 	background-color: @theme_button_bg_color;
 }
 
+scale slider:disabled {
+	background-color: @theme_disabled_bg_color;
+}
+
 scale trough {
 	outline-offset: -2px;
+}
+
+scale trough:disabled {
+	background-color: transparent;
 }
 
 scale.horizontal trough {
