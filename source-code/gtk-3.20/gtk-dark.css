@@ -188,7 +188,8 @@ button image:disabled,
 button.image-button:disabled box,
 button label:disabled,
 combobox box:disabled,
-combobox box arrow:disabled {
+combobox box arrow:disabled,
+entry:disabled {
 	background-color: transparent;
 }
 
@@ -248,6 +249,10 @@ spinbutton {
 
 spinbutton button:active:focus {
 	background-color: @theme_base_color_dark;
+}
+
+spinbutton button:disabled {
+	-gtk-icon-effect: dim
 }
 
 spinbutton.horizontal button {
@@ -1139,8 +1144,21 @@ scale slider {
 	background-color: @theme_base_color_dark;
 }
 
+scale slider:disabled {
+	background-color: @theme_disabled_bg_color_dark;
+}
+
+scale slider:disabled,
+scale trough:disabled {
+	border-color: @theme_disabled_fg_color_dark;
+}
+
 scale trough {
 	outline-offset: -2px;
+}
+
+scale trough:disabled {
+	background-color: transparent;
 }
 
 scale.horizontal trough {
@@ -1324,6 +1342,12 @@ dialog headerbar button label {
 dialog fontchooser,
 iconview {
 	background-color: @theme_base_color_dark;
+}
+
+iconview:hover,
+iconview:selected:focus,
+iconview:backdrop:selected:focus {
+	color: @darker_gray;
 }
 
 scrolledwindow {
