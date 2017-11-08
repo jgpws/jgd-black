@@ -1129,8 +1129,17 @@ scale trough:disabled {
 	background-color: transparent;
 }
 
-scale.horizontal trough {
-	margin: 6px;
+scale highlight {
+	background-color: @medium_gray;
+	margin: 1px;
+}
+
+scale highlight:disabled {
+	background-color: transparent;
+}
+
+scale.horizontal {
+	padding: 6px;
 }
 
 scale.horizontal slider {
@@ -1148,6 +1157,28 @@ scale.vertical slider {
 	margin: 0px -4px;
 	min-width: 10px;
 	min-height: 30px; 
+}
+
+scale marks {
+	color: @theme_border_color;
+}
+
+scale marks.top {
+	margin: -6px 6px 0px 6px;
+}
+
+scale marks.bottom {
+	margin: 0px 6px -6px 6px;
+}
+
+scale.horizontal indicator {
+	min-height: 6px;
+	min-width: 1px;
+}
+
+scale.vertical indicator {
+	min-height: 1px;
+	min-width: 6px;
 }
 
 /* Popovers */
