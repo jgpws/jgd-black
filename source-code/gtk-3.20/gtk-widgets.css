@@ -8,7 +8,7 @@
 	font-stretch: condensed;
 	-GtkIMHtml-hyperlink-color: @theme_link_color;
 	-GtkHTML-link-color: @theme_link_color;
-	-gtk-icon-style: regular; /* Use standard GTK+ icons */
+	-gtk-icon-style: requested;
 	outline-color: @theme_border_color;
 	outline-style: dotted;
 	outline-offset: -3px;
