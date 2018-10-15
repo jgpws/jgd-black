@@ -4,7 +4,7 @@
 /* Overall styles */
 * {
 	background-clip: padding-box;
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	-GtkIMHtml-hyperlink-color: @theme_link_color;
 	-GtkHTML-link-color: @theme_link_color;
@@ -512,7 +512,7 @@ headerbar {
 
 headerbar label {
 	color: @theme_selected_fg_color;
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	font-weight: bold;
 }
@@ -886,9 +886,13 @@ treeview header button label {
 	padding-right: 6px;
 }
 
+paned .view {
+	background-color: transparent;
+}
+
 treeview,
 view,
-.primary-toolbar .view, /* This is used for LibreOffice toolbar dropdowns in Combobox */
+.view, /* This is used for various LibreOffice backgrounds */
 view text {
 	background-color: @theme_base_color;
 	color: @theme_fg_color;
@@ -1330,7 +1334,7 @@ dialog.background {
 }
 
 dialog headerbar label {
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	font-weight: bold;
 }
@@ -1359,6 +1363,7 @@ overlay revealer frame {
 	border: 1px solid @theme_border_color_shade;
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 	color: @theme_selected_fg_color;
+	padding: 6px;
 }
 
 overlay revealer frame border {
@@ -1380,10 +1385,6 @@ separator { /* Color needed for Firefox separators */
 
 popover separator {
 	border-color: @popover_separator_color;
-}
-
-frame {
-	padding: 6px;
 }
 
 toolbar separator {
