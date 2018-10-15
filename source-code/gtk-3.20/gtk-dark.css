@@ -20,6 +20,7 @@
 }
 
 *:selected {
+	background-color: @theme_selected_bg_color_dark;
 	color: @theme_selected_fg_color_dark;
 }
 
@@ -82,6 +83,7 @@ combobox entry {
 }
 
 button,
+button.flat:hover,
 spinbutton,
 entry,
 textview,
@@ -123,6 +125,7 @@ textview /* Textview styles Firefox's address, search and address dropdown */ {
 }
 
 button,
+button.flat:hover,
 menubar > menuitem:active,
 menuitem:hover,
 placessidebar row:selected,
@@ -159,7 +162,8 @@ button.flat {
 }
 
 button:checked,
-button:hover {
+button:hover,
+button.flat:hover {
 	background-color: mix (@theme_base_color_dark, @theme_fg_color_dark, 0.25);
 }
 
@@ -196,6 +200,12 @@ entry:disabled {
 button.image-button:disabled,
 button.popup:disabled image {
 	-gtk-icon-effect: dim;
+	background-image: none;
+}
+
+button.flat {
+	border: 1px solid transparent;
+	background-color: transparent;
 	background-image: none;
 }
 
@@ -293,12 +303,14 @@ spinbutton entry {
 	box-shadow: none;
 }
 
-notebook header tab button {
+notebook header tab button,
+notebook header tab button.flat {
 	background-color: rgba(255, 255, 255, 0.12);
 	border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-notebook header tab:hover button {
+notebook header tab:hover button,
+notebook header tab:hover button.flat {
 	background-color: rgba(255, 255, 255, 0.25);
 	border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -373,21 +385,8 @@ headerbar dialog button {
 }
 
 toolbar button {
-	border: 1px solid transparent;
-	background-color: transparent;
-	background-image: none;
 	margin: 2px;
 	padding: 3px 6px;
-}
-
-toolbar button:hover,
-toolbar button:checked {
-	border: 1px solid @theme_border_color_dark;
-	background-image: linear-gradient(to bottom,
-		rgba(255, 255, 255, 0) 0%,
-		rgba(0, 0, 0, 0) 49%,
-		rgba(0, 0, 0, 0.15) 50%,
-		rgba(0, 0, 0, 0) 100%);
 }
 
 /* Path bar inside window- denoted by class .path-bar */
@@ -540,7 +539,7 @@ headerbar {
 
 headerbar label {
 	color: @white;
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	font-weight: bold;
 }
@@ -931,19 +930,22 @@ view text {
 	color: @theme_fg_color_dark;
 }
 
-row label {
-	color: @theme_fg_color_dark;
-}
-
 .view:selected,
-row:selected,
-row:selected widget {
+row:selected {
 	background-color: @theme_selected_bg_color_dark;
 	color: @theme_selected_fg_color_dark;
 }
 
 .view {
 	padding: 0px 3px;
+}
+
+row:selected {
+	background-color: @theme_selected_bg_color_dark;
+}
+
+row label {
+	color: @theme_fg_color_dark;
 }
 
 row:selected label {
@@ -1289,6 +1291,10 @@ stacksidebar row {
 stacksidebar row:selected,
 stacksidebar row:active {
 	background-color: @theme_base_color_dark;
+	color: @theme_fg_color_dark;
+}
+
+stacksidebar row:selected label {
 	color: @theme_fg_color_dark;
 }
 
@@ -1808,10 +1814,6 @@ headerbar button.titlebutton.close,
 	background-image: -gtk-scaled(url("assets/close-button.png"));
 }
 
-headerbar button.titlebutton.close image {
-	-gtk-icon-style: requested; /* Important! Gets rid of built in close icon, so you can use your own */
-}
-
 headerbar button.titlebutton.close:hover,
 .titlebar button.titlebutton.close:hover,
 headerbar button.titlebutton.close:backdrop,
@@ -1885,13 +1887,13 @@ headerbar button.image-button.popup:hover:backdrop {
 /* Fixes for specific applications */
 
 /* Bluefish text editor */
-bluefishtextview {
+bluefishtextview.view {
 	background-color: @light_gray;
 	caret-color: @theme_fg_color;
 	color: @theme_fg_color;
 }
 
-bluefishtextview selection {
+bluefishtextview.view selection {
 	background-color: @theme_selected_bg_color;
 	color: @theme_selected_fg_color;
 }
