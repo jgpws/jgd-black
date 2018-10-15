@@ -81,6 +81,7 @@ scrollbar trough {
 }
 
 button,
+button.flat:hover,
 spinbutton,
 entry,
 textview,
@@ -122,6 +123,7 @@ textview /* Textview styles Firefox's address, search and address dropdown */ {
 }
 
 button,
+button.flat:hover,
 menubar > menuitem:active,
 menuitem:hover,
 scale.horizontal slider,
@@ -144,6 +146,7 @@ buttonbox button {
 
 button:checked,
 button:hover,
+button.flat:hover,
 progressbar,
 scale trough {
 	background-color: @theme_button_bg_hover_color;
@@ -181,6 +184,12 @@ entry:disabled {
 button.image-button:disabled,
 button.popup:disabled image {
 	-gtk-icon-effect: dim;
+	background-image: none;
+}
+
+button.flat {
+	border: 1px solid transparent;
+	background-color: transparent;
 	background-image: none;
 }
 
@@ -274,12 +283,14 @@ spinbutton entry {
 	box-shadow: none;
 }
 
-notebook header tab button {
+notebook header tab button,
+notebook header tab button.flat {
 	background-color: @notebook_tab_button_bg;
 	border: 1px solid @notebook_tab_button_border;
 }
 
-notebook header tab:hover button {
+notebook header tab:hover button,
+notebook header tab:hover button.flat {
 	background-color: @notebook_tab_button_bg_hover;
 	border: 1px solid @notebook_tab_button_border_hover;
 }
@@ -348,21 +359,8 @@ headerbar stackswitcher button:hover {
 }
 
 toolbar button {
-	border: 1px solid transparent;
-	background-color: transparent;
-	background-image: none;
 	margin: 2px;
 	padding: 3px 6px;
-}
-
-toolbar button:hover,
-toolbar button:checked {
-	border: 1px solid @theme_border_color;
-	background-image: linear-gradient(to bottom,
-		rgba(255, 255, 255, 0) 0%,
-		rgba(0, 0, 0, 0) 49%,
-		rgba(0, 0, 0, 0.10) 50%,
-		rgba(0, 0, 0, 0) 100%);
 }
 
 /* Path bar inside window- denoted by class .path-bar */
@@ -896,6 +894,14 @@ view,
 view text {
 	background-color: @theme_base_color;
 	color: @theme_fg_color;
+}
+
+row:backdrop label {
+	color: @theme_fg_color;
+}
+
+row:backdrop:selected label {
+	color: @theme_selected_fg_color;
 }
 
 .view:selected {
