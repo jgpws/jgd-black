@@ -8,7 +8,7 @@
 /* Overall styles */
 * {
 	background-clip: padding-box;
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	-GtkIMHtml-hyperlink-color: @theme_link_color_dark;
 	-GtkHTML-link-color: @theme_link_color_dark;
@@ -918,20 +918,36 @@ treeview header button label {
 	padding-right: 6px;
 }
 
+paned .view {
+	background-color: transparent;
+}
+
+list,
 treeview,
 view,
-.primary-toolbar .view, /* This is used for LibreOffice toolbar dropdowns in Combobox */
+.view, /* This is used for various LibreOffice backgrounds */
 view text {
 	background-color: @theme_base_color_dark;
 	color: @theme_fg_color_dark;
 }
 
-.view:selected {
+row label {
+	color: @theme_fg_color_dark;
+}
+
+.view:selected,
+row:selected,
+row:selected widget {
+	background-color: @theme_selected_bg_color_dark;
 	color: @theme_selected_fg_color_dark;
 }
 
 .view {
 	padding: 0px 3px;
+}
+
+row:selected label {
+	color: @theme_selected_fg_color_dark;
 }
 
 treemenu menu {
@@ -1396,6 +1412,7 @@ overlay revealer frame {
 	border: 1px solid @theme_border_color_shade_dark;
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 	color: @theme_selected_fg_color_dark;
+	padding: 6px;
 }
 
 overlay revealer frame border {
@@ -1417,10 +1434,6 @@ separator { /* Color needed for Firefox separators */
 
 popover separator {
 	border-color: rgba(0, 0, 0, 0.25);
-}
-
-frame {
-	padding: 6px;
 }
 
 toolbar separator {
