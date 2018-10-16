@@ -52,4 +52,4 @@ To request that JGD-Black use the dark variant of the theme, open the file found
 
 The dark variant will only apply to the GTK3 theme.
 
-Note: The GTK3 version of this theme only works version 3.20 and upwards.
+Note: The GTK3 version of this theme only works in version 3.20 and above.
