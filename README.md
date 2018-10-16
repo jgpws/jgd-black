@@ -33,7 +33,7 @@ JGD-Black is available in the Arch User Repository. The easiest way to install i
 
 Once installed, you can use a theme switching application such as **LXAppearance** or **Gnome Tweak Tool** to change the theme to JGD-Black
 
-## How to install the Clearlooks theme engine:
+## How to install the Clearlooks theme engine
 
 JGD-Black GTK2 requires the Clearlooks theme engine. To install from the command line:
 
