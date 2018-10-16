@@ -27,9 +27,9 @@ With this theme package, you get GTK 2, GTK 3.20 and Openbox themes.
 
 ### To install on Arch Linux:
 
-JGD-Black is available in the Arch User Repository. The easiest way to install it is with a pacman frontend which accesses the AUR, such as [Yaourt](https://archlinux.fr/yaourt-en).
+JGD-Black is available in the Arch User Repository. The easiest way to install it is with a pacman frontend which accesses the AUR, such as [Yay](https://github.com/Jguer/yay).
 
-`yaourt -S jgd-black`
+`yay -S jgd-black`
 
 Once installed, you can use a theme switching application such as **LXAppearance** or **Gnome Tweak Tool** to change the theme to JGD-Black
 
