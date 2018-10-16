@@ -45,4 +45,11 @@ JGD-Black GTK2 requires the Clearlooks theme engine. To install from the command
 
 `sudo pacman -S gtk-engines`
 
+## Dark Theme ##
+To request that JGD-Black use the dark variant of the theme, open the file found in **_your-home-folder_/.config/gtk-3.0/settings.ini** and add or adjust the following:
+
+`gtk-application-prefer-dark-theme=1`
+
+The dark variant will only apply to the GTK3 theme.
+
 Note: The GTK3 version of this theme only works version 3.20 and upwards.
