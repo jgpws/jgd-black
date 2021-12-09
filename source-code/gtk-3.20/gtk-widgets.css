@@ -1437,3 +1437,8 @@ treeview.view rubberband,
 	border: 1px solid @rubberband_border_color;
 	background-color: @rubberband_bg_color;
 }
+
+/* Fixes for rendering issues in some apps */
+window > box > widget > widget { /* Widgets inside of widgets */
+	background-color: @theme_bg_color;
+}
