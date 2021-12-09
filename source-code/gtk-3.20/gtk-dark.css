@@ -1883,6 +1883,12 @@ headerbar button.image-button.popup:hover:backdrop {
 	background-image: -gtk-scaled(url("assets/menu-button-selected.png"));
 }
 
+/* Fixes for rendering issues in some apps */
+window > box > widget > widget { /* Widgets inside of widgets */
+	background-color: @theme_bg_color_dark;
+	color: @theme_fg_color_dark;
+}
+
 
 /* Fixes for specific applications */
 
